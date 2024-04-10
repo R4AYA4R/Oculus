@@ -1,0 +1,713 @@
+html{
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+}
+li{
+    list-style:none;
+}
+img{
+    max-width:100%;
+}
+button{
+    color:inherit;
+    font-size: inherit;
+    background-color: transparent;
+    border:none;
+    cursor:pointer;
+    font-family: inherit;
+    padding: 0;
+}
+.section-title{
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.container{
+    max-width: 1220px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+body{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color:#5C5C5E;
+}
+header{
+    border-bottom:1px solid #CACAD6;
+}
+.nav{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    height: 80px;
+}
+.menu-btn{
+    display: none;
+    width: 40px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu-btn span{
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+.menu{
+    display: flex;
+    gap:0 20px;
+}
+.logo{
+    justify-self: center;
+    display: flex;
+}
+.logo-img{
+    max-width:200px;
+    height: 80px;
+}
+.basket-img{
+    width: 30px;
+    height:30px;
+    background-image: url('https://img.freepik.com/free-icon/square-shopping-bag-with-handle_318-35881.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.basket{
+    position: relative;
+    justify-self: end;
+}
+.basket--on span{
+    font-size: 11px;
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+    border-radius:50%;
+    color: #fff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom:-5px;
+    right:-2px;
+}
+.top{
+    min-height:calc(100vh - 81px); /*calc-калькулятор,с помощью calc высчитываем минимальную высоту,81px в данном случае высота хэдэра */
+    background-image: url('https://metamandrill.com/wp-content/uploads/2022/06/oculus-quest-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+.title{
+    padding-top: 19%;
+    font-size: 96px;
+    margin-bottom: 10px;
+    color:#8f8f8f;
+}
+.subtitle{
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+.top__text{
+    font-size: 13px;
+    margin-bottom: 50px;
+}
+.but__text{
+    font-size: 13px;
+    padding-top: 6px;
+}
+.buy-btn{
+    border:none;
+    cursor:pointer;
+    background:linear-gradient(180deg,#BC10D8 0%,rgba(80, 0, 250, 0.93) 100%); /*градиент */
+    display: flex;
+    padding: 0;
+    text-transform: uppercase;
+    padding: 1px;
+}
+.buy-btn__text{
+    color:#F6F4F5;
+    padding: 20px 110px;
+    text-transform: uppercase;
+}
+.buy-btn__price{
+    background-color: #F6F4F5;
+    padding: 20px 105px;
+    font-weight: 700;
+}
+.features{
+    padding: 100px 0;
+}
+.features__titles{
+    display: flex;
+}
+.feature__title{
+    flex-basis: 300px;
+    padding-right: 20px;
+}
+.features__text{
+    max-width:330px;
+    text-transform: uppercase;
+    font-size: 36px;
+    margin-bottom: 2px;
+    background:linear-gradient(180deg,#BC10D8 0%,rgba(80,0,250,0.93) 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+.tabs{
+    display: grid;
+    grid-template-columns:300px auto;
+}
+.tabs__btn{
+    display: flex;
+    flex-direction:column;
+    align-items:start;
+}
+.tabs__btn-item{
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.tabs__btn-item--active{
+    color:#070707;
+}
+.tabs__content{
+    position: relative;
+    min-height: 300px;
+}
+.tabs__content-item{
+    display: grid;
+    grid-template-columns: auto 280px;
+    grid-template-rows: auto 150px;
+    gap: 40px;
+    opacity: 0;
+    position: absolute;
+    transition:opacity .5s ease;
+}
+.tabs__content-item--active{
+    opacity: 1;
+}
+.tabs__content-box h3{
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.tabs__content-img{
+    grid-row:1/-1;
+    align-self: stretch;
+    object-fit: cover;
+}
+.video{
+    grid-column:2/3;
+    width: 280px;
+    height: 150px;
+    background-image: url('https://img.freepik.com/premium-photo/vr-headset-in-virtual-augmented-reality-style-generative-ai_1160-3398.jpg?w=360');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    padding: 9px 10px;
+}
+.video__btn-img{
+    max-width: 70px;
+}
+.video__btn{
+    margin-left: 7px;
+}
+.video span{
+    font-size: 13px;
+    color:#F6F4F5;
+}
+.game{
+    margin-bottom: 100px;
+}
+.game__item-img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+}
+.game__item-img-1{
+    max-width:100%;
+    min-height:320px;
+    object-fit: cover;
+}
+.game__item-img-2{
+    max-width: 100%;
+    min-height: 320px;
+    object-fit: cover;
+}
+.game__item-img-3{
+    max-width: 100%;
+    min-height: 320px;
+    object-fit: cover;
+}
+.game__title{
+    margin-bottom: 50px;
+}
+.game__inner{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.game__descr{
+    padding-right: 10px;
+}
+.game__descr-title{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 36px;
+    background:linear-gradient(180deg,#BC10D8 0%,rgba(80,0,250,0.93) 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+.game__descr-text{
+    margin-bottom: 24px;
+}
+.game__link{
+    display: inline-block;
+    background:linear-gradient(180deg,#BC10D8 0%,rgba(80,0,250,0.93) 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 16px 15px 12px;
+    border:1px solid #BC10D8;
+    width: 225px;
+    text-align: center;
+    border:1px solid;
+    border-image:linear-gradient(180deg,#BC10D8 0%,rgba(80,0,250,0.93) 100%) 1;
+}
+.game__item{
+    border:1px solid;
+    border-image:linear-gradient(180deg,#BC10D8 0%,rgba(80,0,250,0.93) 100%) 1;
+    padding: 10px 20px 18px;
+    display: flex;
+    flex-direction: column;
+}
+.game__item-title{
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+.game__item-text{
+    margin-bottom: 30px;
+}
+.game__item-link{
+    background:linear-gradient(180deg,#BC10D8 0%,rgba(80,0,250,0.93) 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin-top: auto;
+}
+.buy{
+    margin-bottom: 110px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.buy__img{
+    max-width:350px;
+    margin-bottom: 30px;
+    min-height:300px;
+}
+.buy .buy-btn{
+    margin: 0 auto;
+}
+.buy__bg{
+    font-weight: 700;
+    font-size: 400px;
+    line-height: 300px;
+    background:linear-gradient(180deg,#BC10D8 0%,rgba(80,0,250,0.93) 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    opacity: 0.1;
+    position: absolute;
+    z-index:-1;
+    animation:line-text 6s linear 1s infinite;
+}
+@keyframes line-text{
+    from{
+        transform:translateX(115%);
+        transform-origin:left center;
+    }
+    to{
+        transform:translateX(-115%);
+        transform-origin:right center;
+    }
+}
+.equipment{
+    margin-bottom: 100px;
+}
+.equipment__boxt-img{
+    border:1px solid #8f8f8f;
+    margin-bottom: 10px;
+}
+.equipment__box-img-1{
+    width: 580px;
+    height:560px;
+}
+.equipment__box-img-2{
+    max-width: 250px;
+    height: 250px;
+}
+.equipment__box-img-3{
+    max-width: 250px;
+    height: 250px;
+}
+.equipment__box-img-4{
+    max-width: 250px;
+    height: 250px;
+}
+.equipment__title{
+    margin-bottom: 50px;
+}
+.equipment__box{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: repeat(2,1fr);
+    gap:20px;
+}
+.equipment__box-title{
+    font-size: 36px;
+    text-transform: uppercase;
+    background:linear-gradient(180deg,#BC10D8 0%,rgba(80,0,250,0.93) 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    line-height: 50px;
+}
+.equipment__box-item--one{
+    grid-row: 1/-1;
+}
+.promo{
+    margin-bottom: 100px;
+}
+.promo__inner{
+    background-image: url('https://cdek.shopping/storage/blog/top-4-slemov-i-ockov-virtualnoi-realnosti.jpg');
+    min-height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+}
+.promo__btn{
+    font-weight: 700;
+    color: #fff;
+    background:linear-gradient(180deg,#BC10D8 0%,rgba(80,0,250,0.93) 100%);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.accessories{
+    margin-bottom: 100px;
+}
+.accessories__title{
+    margin-bottom: 30px;
+}
+.accessories__text{
+    margin-bottom: 30px;
+    font-size: 36px;
+    background:linear-gradient(180deg,#BC10D8 0%,rgba(80,0,250,0.93) 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-transform: uppercase;
+}
+.accessories__items{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.accessories__item{
+    padding: 20px;
+    border:1px solid;
+    border-image:linear-gradient(180deg,#BC10D8 0%,rgba(80,0,250,0.93) 100%) 1;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+.accessories__item-img{
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+.accessories__item-title{
+    font-size: 24px;
+    color:#070707;
+    min-height: 67px;
+}
+.accessories__item-text{
+    margin-bottom: 35px;
+    margin-top: auto;
+}
+.accessories__item-price{
+    font-weight: 700;
+    color:#070707;
+    margin-bottom: 20px;
+    margin-top: auto;
+}
+.accessories__item-btn{
+    border:1px solid;
+    border-image:linear-gradient(180deg,#BC10D8 0%,rgba(80,0,250,0.93) 100%) 1;
+    padding: 6px;
+    font-weight: 700;
+    background:linear-gradient(180deg,#BC10D8 0%,rgba(80,0,250,0.93) 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-align: center;
+    width: 100%;
+}
+.contacts{
+    margin-bottom: 100px;
+}
+.contacts__title{
+    color:#070707;
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 10px;
+}
+.contacts__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.contacts__form{
+    flex-basis: 600px;
+}
+.contacts__text{
+    font-size: 13px;
+}
+.form{
+    margin-bottom: 10px;
+    position: relative;
+}
+.form__input{
+    width: 100%;
+    border:none;
+    border-bottom:1px solid #CACAD6;
+    padding: 22px 70px 22px 0;
+    outline:none;
+}
+.form__input::placeholder{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color:#CACAD6;
+}
+.form__btn{
+    width: 50px;
+    height: 50px;
+    background-color: #CACAD6;
+    text-transform: uppercase;
+    font-weight: 700;
+    color:#5C5C5E;
+    border-radius:50%;
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+}
+.footer{
+    margin-bottom: 44px;
+    border-top:1px solid #CACAD6;
+    border-bottom:1px solid #CACAD6;
+    padding: 30px 0;
+}
+.social{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    justify-self:end;
+}
+.social__img{
+    max-width: 40px;
+}
+
+@media(max-width:1140px){
+    .footer .menu{
+        display: none;
+    }
+    .footer .nav{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media (max-width:992px){
+    .tabs{
+        display: block;
+    }
+    .tabs__btn{
+        display: block;
+        column-count: 2;
+    }
+    .tabs__btn-item{
+        display: block;
+    }
+    .game__inner{
+        grid-template-columns: repeat(2,1fr);
+        gap:25px
+    }
+    .equipment__box-img-1{
+        max-width: 100%;
+        height: auto;
+    }
+    .equipment__box-img-2{
+        max-width: 100%;
+        height:auto;
+    }
+    .equipment__box-img-3{
+        max-width: 100%;
+        height: auto;
+    }
+    .equipment__box-img-4{
+        max-width: 100%;
+        height: auto;
+    }
+    .accessories__items{
+        grid-template-columns: repeat(2,1fr);
+        gap:30px;
+    }
+}
+@media (max-width:820px){
+    .equipment__box{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .equipment__box-img-1{
+        max-width: 100%;
+    }
+    .contacts__inner{
+        display: block;
+    }
+    .contacts__form{
+        margin-bottom: 20px;
+    }
+    .menu-btn{
+        display: flex;
+    }
+    .menu{
+        transform:translateX(-100%);
+        transition:transform 1s;
+        position: absolute;
+        top:80px;
+        right: 0;
+        left: 0;
+        background-color: #000;
+        color:#fff;
+        padding: 100px 0;
+        width: 50%;
+        align-items: center;
+        flex-direction: column;
+    }
+    .menu.menu--active{
+        transform:translateX(0%);
+    }
+    .menu__link{
+        font-size: 24px;
+        padding: 10px 0;
+        display: inline-block;
+    }
+}
+@media (max-width:768px){
+    .title{
+        font-size: 66px;
+    }
+    .subtitle{
+        font-size: 24px;
+    }
+}
+@media (max-width:640px){
+    .buy-btn{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .buy-btn__price{
+        width: 100%;
+    }
+    .top{
+        text-align: center;
+    }
+}
+@media (max-width:568px){
+    .features__titles{
+        display: block;
+    }
+    .tabs__content-item{
+        display: block;
+        height: 0;
+        position: relative;
+    }
+    .tabs__content-item--active{
+        height: auto;
+    }
+    .video{
+        margin-top: 20px;
+        width: auto;
+        height: 250px;
+    }
+    .game__inner{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .equipment__box{
+        display: block;
+    }
+    .equipment__box-img-3{
+        width: 100%;
+    }
+    .equipment__box-text{
+        margin-bottom: 10px;
+    }
+    .accessories__items{
+        grid-template-columns: repeat(1,1fr);
+        gap:20px;
+    }
+    .accessories__text{
+        font-size: 28px;
+    }
+    .nav{
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .footer .nav{
+        flex-direction: column;
+        height: auto;
+    }
+    .social{
+        order:-1;
+        gap:30px;
+    }
+    .footer{
+        padding: 20px 0 10px 0;
+    }
+}
+@media (max-width:420px){
+    .title{
+        font-size: 48px;
+    }
+    .subtitle{
+        font-size: 20px;
+    }
+    .tabs__btn{
+        column-count: 1;
+    }
+    .features__text{
+        font-size: 32px;
+    }
+    .buy__img{
+        max-width: 200px;
+        min-height: 160px;
+    }
+    .menu{
+        width: 100%;
+    }
+}
